@@ -1,0 +1,23 @@
+body {
+    overflow: hidden;
+    min-height: 100vh;
+    position: relative;
+}
+
+.bubble {
+    position: absolute;
+    background: rgb(231, 136, 27);
+    height: 150px;
+    width: 150px;
+    border-radius: 1000px;
+    animation: anim 8s forwards;
+    filter: hue-rotate(0);
+}
+
+@keyframes anim {
+    to {
+        top: var(--y);
+        left: var(--x);
+        filter: hue-rotate(720deg);
+    }
+}
