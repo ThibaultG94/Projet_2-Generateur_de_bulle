@@ -13,6 +13,7 @@ body {
     animation: anim 10s forwards;
     filter: hue-rotate(0);
     cursor: crosshair;
+    z-index: 1;
 }
 
 @keyframes anim {
@@ -43,4 +44,16 @@ h3 {
 
 .lose {
     color: red;
+}
+
+.looser {
+    position: absolute;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    font-size: 7rem;
+    visibility: hidden;
 }
