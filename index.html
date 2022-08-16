@@ -5,22 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Générateur de bulle</title>
+    <title>Accueil</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-    <div class="score">
-        <h3 class="win">0</h3>
-        <h3 class="lose">0</h3>
-    </div>
-
-    <div class="looser">
-        <h1>PERDU ! :(</h1>
-    </div>
-
-    <div class="winner">
-        <h1>GAGNÉ !!! :)</h1>
+    <div class="menu">
+        <div class="menu-container">
+            <h1>Bubble Game</h1>
+            <p>Pour jouer, c'est simple: il suffit de cliquer sur chaque bulle que vous voyez.<br />Dés que vous avez
+                touché
+                100
+                bulles, c'est gagné ! Mais attention, à 100 bulles manquées c'est perdu !</p>
+            <form action="./bubbleGame/bubble.html">
+                <a href="./bubbleGame/bubble.html"><input type="button" class="btn" value="JOUER"></a>
+            </form>
+        </div>
     </div>
 
     <script src="./index.js"></script>
