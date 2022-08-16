@@ -2,11 +2,12 @@ let counterWin = 0;
 let counterLose = 0;
 const countWin = document.querySelector(".win");
 const looser = document.querySelector(".looser");
+const winner = document.querySelector(".winner");
+const countLose = document.querySelector(".lose");
 
 const bubbleGenerator = () => {
   const bubble = document.createElement("span");
   let size = Math.random() * 400 + 175 + "px";
-  const countLose = document.querySelector(".lose");
 
   bubble.classList.add("bubble");
   document.body.appendChild(bubble);
@@ -15,25 +16,25 @@ const bubbleGenerator = () => {
     if (counterWin > 99) {
       size = Math.random() * 150 + 100 + "px";
     } else if (counterWin > 89) {
-      size = Math.random() * 175 + 125 + "px";
+      size = Math.random() * 200 + 125 + "px";
     } else if (counterWin > 79) {
-      size = Math.random() * 200 + 75 + "px";
+      size = Math.random() * 250 + 150 + "px";
     } else if (counterWin > 69) {
-      size = Math.random() * 225 + 100 + "px";
+      size = Math.random() * 200 + 100 + "px";
     } else if (counterWin > 59) {
       size = Math.random() * 250 + 125 + "px";
     } else if (counterWin > 49) {
-      size = Math.random() * 275 + 100 + "px";
+      size = Math.random() * 300 + 150 + "px";
     } else if (counterWin > 39) {
-      size = Math.random() * 300 + 125 + "px";
+      size = Math.random() * 350 + 175 + "px";
     } else if (counterWin > 29) {
-      size = Math.random() * 325 + 150 + "px";
+      size = Math.random() * 200 + 125 + "px";
     } else if (counterWin > 19) {
-      size = Math.random() * 350 + 125 + "px";
+      size = Math.random() * 250 + 150 + "px";
     } else if (counterWin > 9) {
-      size = Math.random() * 375 + 150 + "px";
+      size = Math.random() * 300 + 175 + "px";
     } else {
-      Math.random() * 400 + 175 + "px";
+      Math.random() * 350 + 200 + "px";
     }
   };
   varSize();
@@ -44,39 +45,39 @@ const bubbleGenerator = () => {
   bubble.style.top = Math.random() * 100 + 100 + "%";
   bubble.style.left = Math.random() * 100 + "%";
   bubble.style.setProperty("--y", Math.random() * 100 - 200 + "%");
-  bubble.style.setProperty("--x", Math.random() * 100 + "%");
+  bubble.style.setProperty("--x", Math.random() * 0 + 40 + "%");
 
   const varSpeed = () => {
     if (counterWin > 90) {
-      bubble.style.setProperty("--y", Math.random() * 100 - 350 + "%");
-      bubble.style.setProperty("--x", Math.random() * 190 + -90 + "%");
+      bubble.style.setProperty("--y", Math.random() * 100 - 500 + "%");
+      bubble.style.setProperty("--x", Math.random() * 250 - 100 + "%");
     } else if (counterWin > 80) {
       bubble.style.setProperty("--y", Math.random() * 100 - 400 + "%");
-      bubble.style.setProperty("--x", Math.random() * 180 + -80 + "%");
+      bubble.style.setProperty("--x", Math.random() * 200 - 80 + "%");
     } else if (counterWin > 70) {
-      bubble.style.setProperty("--y", Math.random() * 100 - 350 + "%");
-      bubble.style.setProperty("--x", Math.random() * 170 + -70 + "%");
+      bubble.style.setProperty("--y", Math.random() * 100 - 500 + "%");
+      bubble.style.setProperty("--x", Math.random() * 250 - 100 + "%");
     } else if (counterWin > 60) {
-      bubble.style.setProperty("--y", Math.random() * 100 - 300 + "%");
-      bubble.style.setProperty("--x", Math.random() * 160 + -60 + "%");
+      bubble.style.setProperty("--y", Math.random() * 100 - 400 + "%");
+      bubble.style.setProperty("--x", Math.random() * 200 - 80 + "%");
     } else if (counterWin > 50) {
-      bubble.style.setProperty("--y", Math.random() * 100 - 350 + "%");
-      bubble.style.setProperty("--x", Math.random() * 150 + -50 + "%");
+      bubble.style.setProperty("--y", Math.random() * 100 - 300 + "%");
+      bubble.style.setProperty("--x", Math.random() * 150 - 60 + "%");
     } else if (counterWin > 40) {
-      bubble.style.setProperty("--y", Math.random() * 100 - 300 + "%");
-      bubble.style.setProperty("--x", Math.random() * 140 + -40 + "%");
-    } else if (counterWin > 30) {
-      bubble.style.setProperty("--y", Math.random() * 100 - 250 + "%");
-      bubble.style.setProperty("--x", Math.random() * 130 + -30 + "%");
-    } else if (counterWin > 20) {
-      bubble.style.setProperty("--y", Math.random() * 100 - 300 + "%");
-      bubble.style.setProperty("--x", Math.random() * 120 + -20 + "%");
-    } else if (counterWin > 10) {
-      bubble.style.setProperty("--y", Math.random() * 100 - 250 + "%");
-      bubble.style.setProperty("--x", Math.random() * 110 + -10 + "%");
-    } else {
       bubble.style.setProperty("--y", Math.random() * 100 - 200 + "%");
-      bubble.style.setProperty("--x", Math.random() * 100 + "%");
+      bubble.style.setProperty("--x", Math.random() * 100 - 40 + "%");
+    } else if (counterWin > 30) {
+      bubble.style.setProperty("--y", Math.random() * 100 - 850 + "%");
+      bubble.style.setProperty("--x", Math.random() * 425 - 150 + "%");
+    } else if (counterWin > 20) {
+      bubble.style.setProperty("--y", Math.random() * 100 - 600 + "%");
+      bubble.style.setProperty("--x", Math.random() * 300 - 100 + "%");
+    } else if (counterWin > 10) {
+      bubble.style.setProperty("--y", Math.random() * 100 - 350 + "%");
+      bubble.style.setProperty("--x", Math.random() * 175 - 50 + "%");
+    } else {
+      bubble.style.setProperty("--y", Math.random() * 100 - 100 + "%");
+      bubble.style.setProperty("--x", Math.random() * 100 - 0 + "%");
     }
   };
 
@@ -102,16 +103,17 @@ const bubbleGenerator = () => {
 
 const bubblegame = () => {
   if (counterLose < 100) {
-    if (counterWin > 90) {
+    if (counterWin > 99) {
+      countLose.style.color = "green";
+      document.body.style.background = "green";
+      console.log("Gagné ! :)");
+      winner.style.visibility = "visible";
+      bubble.remove("span");
+    } else if (counterWin > 80) {
       bubbleGenerator();
       bubbleGenerator();
       bubbleGenerator();
-      bubbleGenerator();
-    } else if (counterWin > 60) {
-      bubbleGenerator();
-      bubbleGenerator();
-      bubbleGenerator();
-    } else if (counterWin > 30) {
+    } else if (counterWin > 40) {
       bubbleGenerator();
       bubbleGenerator();
     } else console.log("Jeu en cours");
