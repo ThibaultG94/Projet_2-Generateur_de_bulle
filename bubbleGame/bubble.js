@@ -4,6 +4,11 @@ const countWin = document.querySelector(".win");
 const looser = document.querySelector(".looser");
 const winner = document.querySelector(".winner");
 const countLose = document.querySelector(".lose");
+const form = document.querySelector("form");
+const form2 = document.querySelector(".form2");
+let pseudo = "";
+const inputName = document.querySelector('input[type="text"]');
+const bouton = document.querySelector(".btn");
 
 const bubbleGenerator = () => {
   const bubble = document.createElement("span");
@@ -102,14 +107,8 @@ const bubbleGenerator = () => {
 };
 
 const bubblegame = () => {
-  if (counterLose < 100) {
-    if (counterWin > 99) {
-      countLose.style.color = "green";
-      document.body.style.background = "green";
-      console.log("Gagné ! :)");
-      winner.style.visibility = "visible";
-      bubble.remove("span");
-    } else if (counterWin > 80) {
+  if (counterLose < 100 && counterWin < 100) {
+    if (counterWin > 80) {
       bubbleGenerator();
       bubbleGenerator();
       bubbleGenerator();
@@ -118,14 +117,46 @@ const bubblegame = () => {
       bubbleGenerator();
     } else console.log("Jeu en cours");
     bubbleGenerator();
-  } else {
-    countWin.style.color = "red";
-    document.body.style.background = "red";
+  } else if (counterLose > 99) {
     console.log("Perdu ! :(");
     looser.style.visibility = "visible";
+    const score = counterWin - counterLose;
+    inputName.addEventListener("input", (e) => {
+      pseudo = e.target.value;
+    });
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      document.querySelector("form > div").innerHTML = `
+        <h3>Pseudo : ${pseudo}</h3>
+        <h3>Score : ${score}</h3>
+        `;
+      bouton.style.visibility = "visible";
+    });
     setTimeout(() => {
       // window.close();
     }, 600000);
+  } else if (counterWin > 99) {
+    console.log("Gagné ! :)");
+    winner.style.visibility = "visible";
+    const score = counterWin - counterLose;
+    inputName.addEventListener("input", (e) => {
+      pseudo = e.target.value;
+    });
+
+    form2.addEventListener("submit", (e) => {
+      e.preventDefault();
+      document.querySelector(".form2 > div").innerHTML = `
+        <h3>Pseudo : ${pseudo}</h3>
+        <h3>Score : ${score}</h3>
+        `;
+      bouton.style.visibility = "visible";
+    });
+    setTimeout(() => {
+      // window.close();
+    }, 600000);
+  } else {
+    console.log("Je ne sais pas du tout ce qu'il se passe");
   }
 };
 
