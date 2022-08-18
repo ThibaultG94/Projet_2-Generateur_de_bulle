@@ -97,37 +97,49 @@ h3 {
 h1 {
     font-size: 4rem;
     text-transform: uppercase;
-    margin-bottom: 0;
+    margin-bottom: 5px;
     padding-bottom: 0;
     letter-spacing: 1px;
 }
 
-.box {
+.box-win,
+.box-lose {
     margin: 0 auto;
 }
 
-.box h3 {
+.box-lose h3,
+.box-win h3 {
     color: #181818;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 2rem;
     opacity: 1;
 }
 
-.btn {
+.btn,
+.btn-win {
     font-size: 2rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding: 10px 30px;
     border-radius: 10px;
-    transition: 0.4s ease;
     background: rgb(157, 255, 206);
     margin-bottom: 20px;
     margin-top: 40px;
     visibility: hidden;
+    transition: 0.3s ease;
 }
 
-.btn:hover {
+.btn:hover,
+.btn-win:hover {
     cursor: pointer;
     background: rgb(157, 255, 255);
     transform: translateY(5px);
     letter-spacing: 2px;
+}
+
+.score-lose {
+    color: red;
+}
+
+.score-win {
+    color: green;
 }

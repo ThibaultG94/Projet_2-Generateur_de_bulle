@@ -8,7 +8,11 @@ const form = document.querySelector("form");
 const form2 = document.querySelector(".form2");
 let pseudo = "";
 const inputName = document.querySelector('input[type="text"]');
+const inputNameWin = document.querySelector('.form2 > input[type="text"]');
 const bouton = document.querySelector(".btn");
+const boutonWin = document.querySelector(".btn-win");
+const inputLose = document.querySelector(".form1 > input[type='submit']");
+const inputWin = document.querySelector(".form2 > input[type='submit']");
 
 const bubbleGenerator = () => {
   const bubble = document.createElement("span");
@@ -128,10 +132,12 @@ const bubblegame = () => {
     form.addEventListener("submit", (e) => {
       e.preventDefault();
       document.querySelector("form > div").innerHTML = `
-        <h3>Pseudo : ${pseudo}</h3>
-        <h3>Score : ${score}</h3>
+        <h3><span class="score-lose">Score : ${score}</span></h3>
+        <h3>Désolé ${pseudo}, vous pouvez toujours retentez votre chance !</h3>
         `;
       bouton.style.visibility = "visible";
+      inputName.remove();
+      inputLose.remove();
     });
     setTimeout(() => {
       // window.close();
@@ -140,17 +146,19 @@ const bubblegame = () => {
     console.log("Gagné ! :)");
     winner.style.visibility = "visible";
     const score = counterWin - counterLose;
-    inputName.addEventListener("input", (e) => {
+    inputNameWin.addEventListener("input", (e) => {
       pseudo = e.target.value;
     });
 
     form2.addEventListener("submit", (e) => {
       e.preventDefault();
       document.querySelector(".form2 > div").innerHTML = `
-        <h3>Pseudo : ${pseudo}</h3>
-        <h3>Score : ${score}</h3>
+      <h3><span class="score-win">Score : ${score}</span></h3>
+      <h3>Bravo ${pseudo} ! Vous pouvez encore améliorer votre score !</h3>
         `;
-      bouton.style.visibility = "visible";
+      boutonWin.style.visibility = "visible";
+      inputNameWin.remove();
+      inputWin.remove();
     });
     setTimeout(() => {
       // window.close();
