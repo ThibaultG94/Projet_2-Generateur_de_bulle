@@ -11,7 +11,7 @@ body {
     height: 150px;
     width: 150px;
     border-radius: 1000px;
-    animation: anim 10s forwards;
+    animation: anim 10s linear forwards;
     filter: hue-rotate(0);
     cursor: crosshair;
     z-index: 1;
