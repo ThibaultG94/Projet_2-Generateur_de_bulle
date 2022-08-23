@@ -223,12 +223,9 @@ const bubbleGenerator = () => {
   bubble.style.left = Math.random() * 100 + "%";
 
   bubble.style.setProperty("--y", Math.random() * 100 - 500 + "px");
-  // const plusMinus = Math.random() > 0.5 ? 1 : -1; // (If/else) -> Si le Math.random est supèrieur à 0.5, on renvoie 1, sinon on renvoie -1
   bubble.style.setProperty("--x", Math.random() * 100 + "%");
 
   bubble.style.animationDuration = speed;
-  // console.log(size);
-  // console.log(bubble.style.animationDuration);
 
   bubble.addEventListener("click", () => {
     bubble.style.background = "red";
@@ -324,16 +321,6 @@ const bubbleGenerator = () => {
   };
 
   timeOut();
-
-  // setTimeout(() => {
-  //   if (bubble.style.background == "red") {
-  //     bubble.remove("span");
-  //   } else {
-  //     bubble.remove("span");
-  //     counterLose++;
-  //     countLose.textContent = counterLose;
-  //   }
-  // }, 4000);
 };
 
 const bubblegame = () => {
@@ -422,9 +409,7 @@ const bubblegame = () => {
       inputName.remove();
       inputLose.remove();
     });
-    setTimeout(() => {
-      // window.close();
-    }, 600000);
+    setTimeout(() => {}, 600000);
   } else if (counterWin > 99) {
     console.log("Gagné ! :)");
     winner.style.visibility = "visible";
@@ -443,11 +428,9 @@ const bubblegame = () => {
       inputNameWin.remove();
       inputWin.remove();
     });
-    setTimeout(() => {
-      // window.close();
-    }, 600000);
+    setTimeout(() => {}, 600000);
   } else {
-    console.log("Je ne sais pas du tout ce qu'il se passe");
+    console.log("???");
   }
 };
 
